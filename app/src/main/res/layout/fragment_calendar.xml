@@ -19,14 +19,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:mcv_selectionColor="#00F"
-            app:mcv_showOtherDates="all">
+            app:mcv_showOtherDates="all"
+            app:mcv_headerTextAppearance="@style/CalendarTextApperance"
+            />
 
-        </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
 
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
-            android:layout_width="337dp"
+            android:layout_width="match_parent"
             android:layout_height="126dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
@@ -56,7 +57,6 @@
                     android:id="@+id/gift_description"
                     android:layout_width="324dp"
                     android:layout_height="48dp"
-                    android:layout_marginBottom="4dp"
                     android:background="@drawable/back"
                     android:padding="2dp"
                     android:text="Gift Description: this is a long text"
@@ -64,7 +64,7 @@
                     android:textStyle="italic"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.461"
+                    app:layout_constraintHorizontal_bias="0.45"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView

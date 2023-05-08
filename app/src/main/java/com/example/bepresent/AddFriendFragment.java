@@ -69,12 +69,11 @@ public class AddFriendFragment extends Fragment {
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
-
-        //int style = AlertDialog.THEME_HOLO_LIGHT;
-
         int style = AppCompatDialogFragment.STYLE_NO_INPUT;
+
         datePickerDialog = new DatePickerDialog(requireContext(), style, dateSetListener, year, month, day);
-        //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+        //That way a birthday can't be set into the future
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
     }
 
     private String makeDateString(int day, int month, int year)

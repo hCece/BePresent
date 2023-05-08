@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_light">
+    android:background="@android:color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/relativeLayout2"
-            android:layout_width="340dp"
-            android:layout_height="270dp"
-            android:layout_marginTop="40dp"
+            android:id="@+id/rltvLayoutFestivities"
+            android:layout_width="match_parent"
+            android:layout_height="295dp"
+            android:layout_margin="25dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -24,32 +23,342 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Button"
-                    tools:layout_editor_absoluteX="58dp"
-                    tools:layout_editor_absoluteY="185dp" />
+                <RelativeLayout
+                    android:id="@+id/rltvLayoutFestivitiesTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:scrollbars="none"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TableLayout
+                                android:id="@+id/table_festivity"
+                                android:layout_width="300dp"
+                                android:layout_height="100dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/material_dynamic_neutral_variant80">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Festivities"
+                                        android:textSize="17sp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/row_column_names"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/material_dynamic_neutral_variant90">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Name"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Date"
+                                        android:textSize="15sp" />
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/row_festivity_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/cell_festivity_11"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Christmas"
+                                        android:textSize="15sp" />
+
+
+                                    <TextView
+                                        android:id="@+id/cell_festivity_12"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="09/04"
+                                        android:textSize="15sp" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:id="@+id/row_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/cell_festivity_21"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Easter"
+                                        android:textSize="15sp" />
+
+
+                                    <TextView
+                                        android:id="@+id/cell_festivity_22"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="09/04"
+                                        android:textSize="15sp" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                        </ScrollView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </RelativeLayout>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/button_add_festivity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button"
-                    tools:layout_editor_absoluteX="230dp"
-                    tools:layout_editor_absoluteY="211dp" />
+                    android:layout_marginStart="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/button_edit_festivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </RelativeLayout>
 
+
+
         <RelativeLayout
-            android:layout_width="340dp"
-            android:layout_height="270dp"
-            android:layout_marginTop="40dp"
+            android:id="@+id/rltvLayoutFriend"
+            android:layout_width="match_parent"
+            android:layout_height="295dp"
+            android:layout_margin="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.461"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rltvLayoutFriendTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:scrollbars="none"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TableLayout
+                                android:id="@+id/table_friend"
+                                android:layout_width="300dp"
+                                android:layout_height="100dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                <TableRow
+                                    android:id="@+id/row_friend_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/material_dynamic_neutral_variant80">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Close Friends"
+                                        android:textSize="17sp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/material_dynamic_neutral_variant90">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Name"
+                                        android:textSize="15sp" />
+
+
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/row_friend_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/cell_friend_1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Juri Horstmann"
+                                        android:textSize="15sp" />
+
+
+
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:id="@+id/row_friend_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/cell_friend_3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="4"
+                                        android:gravity="center"
+                                        android:padding="3dp"
+                                        android:text="Max Fosh"
+                                        android:textSize="15sp" />
+
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                        </ScrollView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/button_friend_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/button_friend_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
