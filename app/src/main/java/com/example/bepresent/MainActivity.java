@@ -1,16 +1,25 @@
 package com.example.bepresent;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.room.Room;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.bepresent.database.AppDatabase;
+import com.example.bepresent.database.UserRepository;
+import com.example.bepresent.database.friends.FriendRepository;
+import com.example.bepresent.fragments.AddFriendFragment;
+import com.example.bepresent.fragments.CalendarFragment;
+import com.example.bepresent.fragments.FestivitiesFragment;
+import com.example.bepresent.fragments.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -19,6 +28,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // This method is called when the activity is first created.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "database-bePresent-3").build();
+
+
+        FriendRepository.initialize(db.friendDao());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
